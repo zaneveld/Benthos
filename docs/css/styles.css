@@ -1,0 +1,104 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --darkblue: #324364;
+  --tan: #cfd6a7
+}
+
+
+body {
+        background-color: #cfd6a7;
+        color: #333333;
+        font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+        color: #324364;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1; /* Fully black */
+    }
+    100% {
+        opacity: 0; /* Fully transparent */
+    }
+}
+
+.overlay {
+    position: fixed; /* Covers the whole screen */
+    pointer-events: none; /* Prevents clicks or interactions during animation */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Black overlay */
+    z-index: 9999; /* Ensures it sits above all other content */
+    animation: fadeIn 5s ease-out forwards; /* Apply fadeIn animation */
+}
+
+/* Navigation Container */
+.navigation {
+    display: flex;
+    justify-content: center; /* Horizontally centers the nav items */
+    align-items: flex-end; /* Aligns the bottoms of the icons */
+    gap: 20px; /* Space between icons */
+    margin-top: 30px;
+}
+
+
+/* Individual Navigation Item */
+.nav-item {
+    display: flex; /* Enables flexbox for inner alignment */
+    flex-direction: column; /* Stack icon and text vertically */
+    justify-content: flex-end; /* Aligns the icon and text to the bottom */
+    align-items: center; /* Centers icon and text horizontally */
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+
+.nav-item p {
+    margin-top: 10px; /* Space between icon and text */
+    font-size: 18px; /* Adjust font size for labels */
+}
+
+/* Icon Styling */
+.nav-item img {
+    max-width: 480px; /* Sets consistent maximum width */
+    max-height: 480px; /* Ensures icons don’t exceed this height */
+    width: auto; /* Maintains aspect ratio */
+    height: 180px; /* Maintains aspect ratio */
+    transition: transform 0.3s; /* Adds hover effect */
+    background-color: #324364
+}
+
+/* Hover Effect for Icons */
+.nav-item:hover img {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+.nav-item:hover p {
+    color: #1a73e8; /* Change text color on hover */
+}
+
+.container {
+        border: 2px solid #1a73e8;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #cfd6a7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 20px auto;
+}
+
+.container img {
+    display: block; /* Makes the image behave like a block element */
+    margin: 0 auto; /* Horizontally centers the block element */
+    max-width: 100%; /* Ensures the image scales responsively */
+    border-radius: 20px;
+}
+
+
