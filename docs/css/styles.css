@@ -60,7 +60,7 @@ h1, h2, h3 {
     align-items: center; /* Centers icon and text horizontally */
     text-align: center;
     text-decoration: none; /* Removes underline from links */
-    color: car(--darkblue);
+    color: var(--darkblue);
     font-family: Arial, sans-serif;
 }
 
@@ -125,6 +125,41 @@ border-radius: 10px;
     }
 }
 
+/* Frame around the image */
+.image-frame-reef-research {
+    position: relative;
+    width: 100%; /* Use the full width of the container */
+    max-width: 800px; /* Optional: Set a max-width for the image */
+    height: 400px; /* Define the visible height of the image */
+    overflow: hidden; /* Clips anything outside the container */
+    margin: 0 auto; /* Center the frame horizontally */
+}
+
+/* Ken Burns Effect on the image */
+.image-frame-reef-research img {
+    position: absolute; /* Allows panning effect */
+    width: 120%; /* Slightly larger than the frame for zoom */
+    height: auto; /* Maintain aspect ratio */
+    top: 20%; /* Start panning from the top */
+    left: -20%; /* Start panning from the left */
+    animation: kenBurnsReefResearch 40s ease-in-out infinite alternate; /* Slow pan/zoom */
+}
+
+/* Keyframes for Ken Burns Reef Research Effect 
+translate(x,y)  -- negative x is "to the right" (pushing image to the left)
+                -- negative y is "down" (pushing image up)
+*/
+@keyframes kenBurnsReefResearch {
+    0% {
+        transform: scale(1.7) translate(-5%, 3%) rotate(0deg); /* Slight zoom in, top-left */
+    }
+    70% {
+        transform: scale(1.5) translate(20%, -10%) rotate(-5deg); /* Midpoint zoom + slight pan */
+    }
+    100% {
+        transform: scale(1.7) translate(-5%, -50%) rotate(0deg); /* More zoom + pan bottom-right */
+    }
+}
 .container {        
         padding: 20px;
         background-color: var(--white);
