@@ -160,6 +160,10 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
         transform: scale(1.7) translate(-5%, -50%) rotate(0deg); /* More zoom + pan bottom-right */
     }
 }
+
+
+/* Default settings for laptops or landscape mode phones */
+
 .container {        
         padding: 20px;
         background-color: var(--white);
@@ -176,4 +180,27 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
     border-radius: 20px;
 }
 
+/* Responsive Adjustments for Portrait Phones */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    /* Reduce the image-frame height */
+    .image-frame {
+        height: 250px; /* Shrink the image frame */
+    }
 
+    /* Reduce the gap between elements */
+    .container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    /* Adjust heading spacing */
+    h1 {
+        margin-top: 10px; /* Pull the heading closer to the image */
+        font-size: 1.8rem; /* Slightly reduce font size for headings */
+    }
+
+    /* Adjust paragraph spacing */
+    p {
+        font-size: 1rem; /* Slightly reduce font size for paragraphs */
+        line-height: 1.4; /* Adjust line spacing */
+    }
+}
