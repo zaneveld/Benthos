@@ -144,6 +144,7 @@ border-radius: 10px;
     height: auto; /* Maintain aspect ratio */
     top: -20%; /* Start panning from the top */
     left: 20%; /* Start panning from the left */
+    border-radius: 5%;
     animation: kenBurnsOctopus 20s ease-in-out infinite alternate; /* Slow pan/zoom */
 }
 
@@ -172,6 +173,7 @@ border-radius: 10px;
     height: 400px; /* Define the visible height of the image */
     overflow: hidden; /* Clips anything outside the container */
     margin: 0 auto; /* Center the frame horizontally */
+    border-radius: 5%; /* Round corners */
 }
 
 /* Ken Burns Effect on the image */
@@ -181,6 +183,7 @@ border-radius: 10px;
     height: auto; /* Maintain aspect ratio */
     top: 20%; /* Start panning from the top */
     left: -20%; /* Start panning from the left */
+    border-radius: 5%; /* Round corners */
     animation: kenBurnsReefResearch 40s ease-in-out infinite alternate; /* Slow pan/zoom */
 }
 
@@ -216,7 +219,7 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
     display: block; /* Makes the image behave like a block element */
     margin: 0 auto; /* Horizontally centers the block element */
     max-width: 100%; /* Ensures the image scales responsively */
-    border-radius: 10px;
+    border-radius: 5%;
 }
 
 /* Responsive Adjustments for Portrait Phones */
