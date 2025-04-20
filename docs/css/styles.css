@@ -229,7 +229,7 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
     0%  {
         transform:scale(1.1) translate(-5%,5%) rotate(0deg); 
     }
-    20% {
+    50% {
         transform: scale(1.7) translate(-15%, 15%) rotate(-15deg); /* Midpoint zoom + slight pan */
     }
     70% {
