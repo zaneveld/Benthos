@@ -15,6 +15,8 @@ body {
         background-color: var(--white);
         color: var(--darkblue);
         font-family: Arial, sans-serif;
+        padding-top:10%;
+        padding-bottom:0%;
 }
 
 h1, h2, h3 {
@@ -45,16 +47,32 @@ h1, h2, h3 {
     z-index: 9999; /* Ensures it sits above all other content */
     animation: fadeIn 2s ease-out forwards; /* Apply fadeIn animation */
 }
+/*----------------------------------------Navbar-----------------------------------------------*/
 
 /* Navigation Container */
 .navigation {
-    display: flex;
-    justify-content: center; /* Horizontally centers the nav items */
-    align-items: flex-end; /* Aligns the bottoms of the icons */
-    gap: 20px; /* Space between icons */
-    margin-top: 30px;
+  display: flex;
+  justify-content: center; /* Horizontally centers the nav items */
+  align-items: flex-end; /* Aligns the bottoms of the icons */
+  gap: 15%; /* Space between icons */
+  margin-top: 0px;
+   
+  /* Position the navbar fixed to the viewport */
+  position: fixed;
+  /* Align it to the bottom */
+  /*bottom: 0*/
+  top:0;
+  /* Make it span the full width of the page */
+  width: 100%;
+  /* Add a background color */
+  background-color: rgba(255,255,255,0.85);
+  /* Add some padding */
+  padding: 10px 0;
+  /* Center the text */
+  text-align: center;
+  /* Add a z-index to ensure it stays on top */
+  z-index: 5;
 }
-
 
 /* Individual Navigation Item */
 .nav-item {
@@ -72,24 +90,31 @@ h1, h2, h3 {
 .nav-item p {
     margin-top: 10px; /* Space between icon and text */
     font-size: 18px; /* Adjust font size for labels */
+    transition: transform 0.3s;
 }
 
 /* Icon Styling */
 .nav-item img {
     max-width: 480px; /* Sets consistent maximum width */
     max-height: 480px; /* Ensures icons don’t exceed this height */
-    width: auto; /* Maintains aspect ratio */
-    height: 180px; /* Maintains aspect ratio */
-    transition: transform 0.3s; /* Adds hover effect */
+    /*width: auto; /* Maintains aspect ratio */
+    width: auto;
+    height: 50%; /* Maintains aspect ratio */
+    filter: brightness(0.25);
+    transition: transform 0.3s; /* Set timing of effect transitions */
 }
 
 /* Hover Effect for Icons */
 .nav-item:hover img {
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    transform: translate(0,50%) scale(2.0); /* Slightly enlarge icon on hover */
+    border-radius: 15%; /* Round corners */
+    filter:brightness(0.0);
 }
 
 .nav-item:hover p {
-    color: #1a73e8; /* Change text color on hover */
+    color: var(--darkblue); /* Change text color on hover */
+    transform: translate(0,1.0em);
+    #font-size: 22pt; /* Slightly enlarge icon on hover */
 }
 
 /*border: 2px solid var(--darkblue);
@@ -150,7 +175,8 @@ border-radius: 10px;
 .left-image {
     float: left; /* Ensures the image floats to the left */
     margin: 0 15px 15px 0; /* Adds space around the image: right and bottom */
-    max-width: 200px; /* Optional: Limits image width for consistency */
+    width: 30%; 
+    max-width: 300px; /* Optional: Limits image width for consistency */
     height: auto; /* Maintains aspect ratio */
     border-radius: 5%; /* Optional: Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
@@ -208,8 +234,6 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
 
 
 
-
-
 /* Keyframes for Ken Burns Effect */
 @keyframes kenBurnsParrotfish {
     0% {
@@ -259,7 +283,6 @@ translate(x,y)  -- negative x is "to the right" (pushing image to the left)
     max-width: 100%; /* Ensures the image scales responsively */
     border-radius: 5%;
 }
-
 
 
 
